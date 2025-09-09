@@ -1,0 +1,105 @@
+/* --- فونت و استایل پایه --- */
+body {
+  direction: rtl;        /* راست‌چین */
+  text-align: right;
+  font-family: "Vazirmatn", Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+  background: #f4f6f8;
+  color: #333;
+}
+
+/* --- هدر --- */
+header {
+  background: #2c3e50;
+  color: white;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0 0 0.5rem 0;
+  text-align: right; /* تیتر سمت راست */
+}
+
+/* --- منو --- */
+nav {
+  display: flex;
+  flex-direction: row;        /* ترتیب لینک‌ها درست */
+  gap: 10px;
+}
+
+nav a {
+  display: inline-block;      /* برای اعمال text-align */
+  text-align: right;          /* متن لینک راست‌چین */
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 5px 12px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: #34495e;
+}
+
+/* --- بخش اصلی --- */
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.intro, .content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* --- کارت‌های وبلاگ --- */
+.blog-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* --- فوتر --- */
+footer {
+  background: #ddd;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* --- ریسپانسیو --- */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;   /* منو ستونی در موبایل */
+    align-items: flex-end;    /* سمت راست بمونه */
+  }
+  main {
+    padding: 1rem;
+  }
+}
